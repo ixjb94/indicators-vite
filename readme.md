@@ -71,7 +71,7 @@ Browser - Option 2 - use the Indicators you need
 Browser - Option 3 - Using CDN
 ```html
 <!-- All 30kb file -->
-<script src="https://unpkg.com/@ixjb94/indicators-vite@latest/dist/index.umd.js"></script>
+<script src="https://app.unpkg.com/@ixjb94/indicators-vite@2.0.3/files/dist/indicators.umd.js"></script>
 
 <!-- Singles -->
 <script src="https://unpkg.com/@ixjb94/indicators-vite@latest/src/ema.js"></script>
