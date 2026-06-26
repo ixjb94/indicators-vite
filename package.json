@@ -1,6 +1,6 @@
 {
   "name": "@ixjb94/indicators-vite",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Fastest Technical Indicators written in javascript. More than +100 indicators(SMA, EMA, RSI, MACD, ...)",
   "main": "./dist/indicators.umd.js",
   "module": "./dist/indicators.es.js",
