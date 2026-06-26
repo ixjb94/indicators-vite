@@ -1,5 +1,3 @@
-// Run this from your project root after `npm run build`
-// node generate-types.js
 import { readFileSync, readdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
 
@@ -11,10 +9,8 @@ let output = '// Auto-generated — run `node generate-types.js` after build\n\n
 
 for (const file of files) {
     const content = readFileSync(join(typesDir, file), 'utf8');
-    const converted = content
-        .replace(/^export = \w+;\n?/m, '')
-        .replace(/^declare function /gm, 'export function ');
-    output += converted.trim() + '\n\n';
+    if (file == "index.d.ts") continue;
+    output += content + '\n\n';
 }
 
 writeFileSync('dist/index.d.ts', output);
