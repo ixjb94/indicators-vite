@@ -1,0 +1,45 @@
+{
+  "name": "@ixjb94/indicators-vite",
+  "version": "2.0.0",
+  "description": "Fastest Technical Indicators written in javascript. More than +100 indicators(SMA, EMA, RSI, MACD, ...)",
+  "type": "module",
+  "main": "./dist/indicators.umd.js",
+  "module": "./dist/indicators.es.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/indicators.es.js",
+      "require": "./dist/indicators.umd.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build:vite": "vite build",
+    "build": "vite build && tsc --allowJs --declaration --emitDeclarationOnly --outDir types && node generate-types.js",
+    "types": "tsc --allowJs --declaration --emitDeclarationOnly --outDir types",
+    "npm-publish": "npm publish --access public",
+    "npm-patch": "npm version patch",
+    "git:publish": "git push origin master",
+    "publish:all": "npm run npm-patch && npm run npm-publish && npm run git:publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ixjb94/indicators-vite.git"
+  },
+  "keywords": [
+    "indicators",
+    "ema",
+    "sma",
+    "rsi",
+    "cci",
+    "technical indicators",
+    "chart",
+    "trade"
+  ],
+  "author": "IX JB",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "vite": "^8.1.0"
+  }
+}

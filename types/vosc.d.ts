@@ -1,0 +1,9 @@
+/**
+ *
+ * @param {number[]} source
+ * @param {number} short_period
+ * @param {number} long_period
+ * @param {number} [size]
+ * @returns
+ */
+export function vosc(source: number[], short_period: number, long_period: number, size?: number): number[];
